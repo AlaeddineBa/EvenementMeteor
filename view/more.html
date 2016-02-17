@@ -1,0 +1,19 @@
+<template name="more">
+<div class="one-event">
+	<div class="event-date">
+		<h4>Le {{ date }}</h4>
+	</div>
+	<div class="event-desc">
+		{{ desc }}
+	</div>
+	<div class="event-actions">		
+		<a class="btn btn-raised btn-danger" id="deleteList" href="/delete/{{ _id }}">
+			<i class="fa fa-trash-o"></i>
+		</a>
+
+		<a class="btn btn-raised btn-warning" id="editList" href="/edit/{{ _id }}">
+			<i class="fa fa-pencil"></i>
+		</a>
+	</div>
+</div> 
+</template>

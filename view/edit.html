@@ -1,0 +1,45 @@
+<template name="edit">
+	<table class="table">
+		<tbody>
+			<tr>
+				<td>
+					<div class="form-group add-form">
+					  <label class="control-label" >Titre</label>
+					  <input class="form-control" type="text" id="titre" value='{{ titre }}'>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="form-group add-form">
+					  <label class="control-label" >Descriptions</label>
+					  <input class="form-control" type="text" id="desc" value='{{ desc }}'>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="form-group add-form input-append date">
+					  <label class="control-label" >Date</label>
+					  <input class="form-control datepicker" type="text" id="date" value='{{ date }}'>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="form-group add-form">
+					  <label class="control-label" >Type</label>
+					  <input class="form-control" type="text" id="type" value='{{ type }}'> 				
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button class="btn btn-raised btn-info" id="update">Update</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+</template>

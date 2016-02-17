@@ -1,0 +1,77 @@
+<template name="home">
+	<head>
+	  <title>Gestion des evenements</title>
+	</head>
+
+	<body>
+		<div class="row">
+			<div class="col-md-12 text-center">			
+					{{> form}}				
+			</div>
+		</div>
+	    <div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				{{> evenements}}
+			</div>
+		</div>
+	</body>	
+</template>
+
+<template name="form">
+	<div class="container">
+		<h1>Gestion des evenements</h1>
+		<form class="form-inline">
+			<table class="table">
+				<tbody>
+					<tr>
+						<td>
+							<div class="form-group add-form">
+							  <label class="control-label" >Titre</label>
+							  <input class="form-control" type="text" id="titre">
+							</div>
+						</td>
+						<td>
+							<div class="form-group add-form">
+							  <label class="control-label" >Descriptions</label>
+							  <input class="form-control" type="text" id="desc">
+							</div>
+						</td>
+						<td>
+							<div class="form-group add-form input-append date">
+							  <label class="control-label" >Date</label>
+							  <input class="form-control datepicker" type="text" id="date">
+							</div>
+						</td>
+						<td>
+							<div class="form-group add-form">
+							  <label class="control-label" >Type</label>
+							  <input class="form-control" type="text" id="type"> 				
+							</div>
+						</td>
+						<td>
+							<button class="btn btn-raised btn-primary" id="addEvent">Add Event</button>
+						</td>
+						<td>
+							<button class="btn btn-raised btn-info" >Update</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+</template>
+<template name="evenements">
+	<table class="table event-list">
+		<tbody>
+		{{#each evenements}}
+			<tr class="event">
+				
+
+				<td><span class="event-title">{{ titre }}</span></td>
+				<td><button class="btn btn-primary" id='more'><i class="fa fa-chevron-right"></i></button></td>
+			</tr>
+		{{/each}}
+		</tbody>
+	</table>
+
+</template>
